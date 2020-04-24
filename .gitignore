@@ -1,0 +1,6 @@
+gitignore/
+tinybldwin*
+pic16f18446/*/*/build/*
+pic16f18446/*/*/debug/*
+pic16f18446/*/*/dist/*
+*.bak
