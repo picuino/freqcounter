@@ -8,6 +8,12 @@ This frequency counter is based on a little **PIC 16F18446** a
 
 You can mount it over a breadboard with this simple 
 [schematic](pic16f18446/kicad/breadboard/freqcounter_16F18446.pdf)
+The LDC display is optional. All the info is sended via serial.
+
+
+The frequency counter have a Command Line Interface via serial 
+communications for manage internal options. You can read more in 
+[Command Line Interface commands help](pic16f18446/docs/commands.md)
 
 
 Specifications
