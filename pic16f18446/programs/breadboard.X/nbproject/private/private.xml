@@ -7,8 +7,13 @@
             <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/calibration.h</file>
             <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/counter.h</file>
             <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/timers.c</file>
+            <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/calibration.c</file>
+            <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/counter.c</file>
             <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/command.c</file>
+            <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/math48.c</file>
             <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/config.h</file>
+            <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/command.h</file>
+            <file>file:/D:/Picuino/Projects/PC202_Frequency_counter/pic16f18446/programs/breadboard.X/math48.h</file>
         </group>
     </open-files>
 </project-private>

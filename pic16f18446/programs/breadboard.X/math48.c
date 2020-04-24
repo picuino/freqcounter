@@ -443,6 +443,8 @@ void sprintf48(char *str, char digits, uint48 n) {
             break; // Mega
          case 9: dot = 'G';
             break; // Giga
+         case 12: dot = 'T';
+            break; // Tera
          default:
             dot = 0; // error
       }
