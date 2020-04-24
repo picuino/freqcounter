@@ -10,7 +10,7 @@ This frequency counter is based on a little **PIC 16F18446** a
 Specifications
 --------------
 * Input frequency range: 0.01 Hz to 15MHz
-* Resolution: 8 decimal places per second (10PPB) at all frequencies.
+* Resolution: 8 digits per second (10PPB) at all frequencies.
 * Precision: 0.1PPM with simple crystal and calibration.
 * Number of inputs: 2 TTL inputs + 1 Zero Cross Detection input
 * Output: Frequency or Period, time and pulses counted.
