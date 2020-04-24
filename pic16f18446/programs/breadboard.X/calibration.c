@@ -136,11 +136,11 @@ void counter_1pps_autocalibrate(void) {
       temp >>= 7;
    }
    if (dpulses.word[0] == 10) {
-      if (temp > (_FCYCLES * (FREQ_BUFFER_SIZE - 1) * 1.01 / 65536)) return;
-      if (temp < (_FCYCLES * (FREQ_BUFFER_SIZE - 1) * 0.99 / 65536)) return;
+      if (temp > (_FCYCLES * (COUNTER_BUFFER_SIZE - 1) * 1.01 / 65536)) return;
+      if (temp < (_FCYCLES * (COUNTER_BUFFER_SIZE - 1) * 0.99 / 65536)) return;
    } else if (dpulses.word[0] == 20) {
-      if (temp > (_FCYCLES * 2 * (FREQ_BUFFER_SIZE - 1) * 1.01 / 65536)) return;
-      if (temp < (_FCYCLES * 2 * (FREQ_BUFFER_SIZE - 1) * 0.99 / 65536)) return;
+      if (temp > (_FCYCLES * 2 * (COUNTER_BUFFER_SIZE - 1) * 1.01 / 65536)) return;
+      if (temp < (_FCYCLES * 2 * (COUNTER_BUFFER_SIZE - 1) * 0.99 / 65536)) return;
    } else return;
 
    // Obtain 1e9 number and calibrate
@@ -163,8 +163,8 @@ void counter_10mhz_autocalibrate(void) {
       return;
 
    // Test if input signal is 10MHz Hz +-1%
-   if (dpulses.dword > 10000000 * (FREQ_BUFFER_SIZE - 1) * 1.01 / 65536) return;
-   if (dpulses.dword < 10000000 * (FREQ_BUFFER_SIZE - 1) * 0.99 / 65536) return;
+   if (dpulses.dword > 10000000 * (COUNTER_BUFFER_SIZE - 1) * 1.01 / 65536) return;
+   if (dpulses.dword < 10000000 * (COUNTER_BUFFER_SIZE - 1) * 0.99 / 65536) return;
 
    // Obtain 1e9 number and calibrate
    ILOAD48(billion, 100L);

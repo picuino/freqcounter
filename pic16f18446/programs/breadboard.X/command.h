@@ -5,8 +5,6 @@
 #ifndef COMMAND_H
 #define COMMAND_H
 
-#define CMD_BUFF_LENGTH   100
-
 void cmd_init(void);
 void cmd_get_token(void);
 char cmd_str_cmp(const char *str);

@@ -9,7 +9,7 @@
  *
  */
 
-// 'C' source line config statements
+#define COUNTER_VERSION         "2020-april-24"
 
 #define _FOSC                   32000000UL
 #define _FCYCLES                (_FOSC/4)
@@ -19,7 +19,6 @@
 
 #define MAX_CALIBRATION         300000   // Maximun calibration in PPB
 #define SAF_ADDRESS             0x3F80   // Storage Area Flash address
-#define COUNTER_VERSION         "2020-april-24"
 
 #define DOT_CHAR                '.'
 

@@ -31,10 +31,10 @@ extern unsigned char str_buf[];
 extern unsigned int ctmu_constant;
 extern calibration_t calibration;
 
-uint48 buff_pulses_a[FREQ_BUFFER_SIZE];
-uint48 buff_time_a[FREQ_BUFFER_SIZE];
-uint48 buff_pulses_b[FREQ_BUFFER_SIZE];
-uint48 buff_time_b[FREQ_BUFFER_SIZE];
+uint48 buff_pulses_a[COUNTER_BUFFER_SIZE];
+uint48 buff_time_a[COUNTER_BUFFER_SIZE];
+uint48 buff_pulses_b[COUNTER_BUFFER_SIZE];
+uint48 buff_time_b[COUNTER_BUFFER_SIZE];
 uint48 frequency, period;
 uint48 temp, time;
 uint48 pulses_a, time_a;
@@ -196,11 +196,11 @@ void counter_wait_period(void) {
    if (options.fast_measure) {
       millis += 100;
       if ((long) (millis - milliseconds()) < 0)
-         millis = milliseconds();
+         millis = milliseconds() + 50;
    } else {
       millis += 1000;
       if ((long) (millis - milliseconds()) < 0)
-         millis = milliseconds() + 900;
+         millis = milliseconds() + 950;
    }
    while ((long) (millis - milliseconds()) > 0)
       cmd_loop();
@@ -616,10 +616,10 @@ void counter_blink_lcd(void) {
  */
 void counter_buffer_inc(void) {
    buff_end++;
-   if (buff_end == FREQ_BUFFER_SIZE)
+   if (buff_end == COUNTER_BUFFER_SIZE)
       buff_end = 0;
    if (buff_init == buff_end)
       buff_init++;
-   if (buff_init == FREQ_BUFFER_SIZE)
+   if (buff_init == COUNTER_BUFFER_SIZE)
       buff_init = 0;
 }

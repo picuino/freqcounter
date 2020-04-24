@@ -5,7 +5,7 @@
 #ifndef COUNTER_H
 #define COUNTER_H
 
-#define FREQ_BUFFER_SIZE    11
+#define COUNTER_BUFFER_SIZE    11
 
 #define DISP_TRIS   TRISCbits.TRISC6
 #define DISP_LAT    LATCbits.LATC6
