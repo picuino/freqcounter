@@ -189,21 +189,21 @@ void cmd_calibration(void) {
    cmd_delete_token();
    cmd_get_token();
    if (cmd_str_cmp("read")) {
-      uart_fputs(">Calibration (RAM)=\t");
+      uart_fputs("# Calibration (RAM)=\t");
       print_long(cmd_get_calibration());
       uart_fputs("\tPPB\n");
-      uart_fputs(">Calibration (EPROM)=\t");
+      uart_fputs("# Calibration (EPROM)=\t");
       print_long(cmd_get_calibration_eprom());
       uart_fputs("\tPPB\n");
    } else if (cmd_str_cmp("save")) {
       calibration_eprom_write();
-      uart_fputs(">Calibration (EPROM)=\t");
+      uart_fputs("# Calibration (EPROM)=\t");
       print_long(cmd_get_calibration_eprom());
       uart_fputs("\tPPB\n");
    } else if (cmd_str_cmp("write")) {
       cmd_delete_token();
       cmd_get_number();
-      uart_fputs(">Old Calibration (RAM)=\t");
+      uart_fputs("# Old Calibration (RAM)=\t");
       print_long(cmd_get_calibration());
       cmd_set_calibration();
       uart_fputs("\n>New Calibration (RAM)=\t");
@@ -211,7 +211,7 @@ void cmd_calibration(void) {
       uart_fputs("\n");
    } else if (cmd_str_cmp("auto")) {
       options.autocalibrate = cmd_read_on_off(options.autocalibrate);
-      uart_fputs(">Autocalibration=\t");
+      uart_fputs("# Autocalibration=\t");
       cmd_print_on_off(options.autocalibrate);
    } else {
       cmd_unknown();
@@ -237,23 +237,23 @@ void cmd_output(void) {
 
    if (cmd_str_cmp("pulses")) {
       options.print_pulses = cmd_read_on_off(options.print_pulses);
-      uart_fputs(">Print pulses=\t");
+      uart_fputs("# Print pulses=\t");
       cmd_print_on_off(options.print_pulses);
    } else if (cmd_str_cmp("time")) {
       options.print_time = cmd_read_on_off(options.print_time);
-      uart_fputs(">Print time=\t");
+      uart_fputs("# Print time=\t");
       cmd_print_on_off(options.print_time);
    } else if (cmd_str_cmp("longfreq")) {
       options.print_long_frequency = cmd_read_on_off(options.print_long_frequency);
-      uart_fputs(">Print long frequency=\t");
+      uart_fputs("# Print long frequency=\t");
       cmd_print_on_off(options.print_long_frequency);
    } else if (cmd_str_cmp("period")) {
       options.print_period = cmd_read_on_off(options.print_period);
-      uart_fputs(">Print period=\t");
+      uart_fputs("# Print period=\t");
       cmd_print_on_off(options.print_period);
    } else if (cmd_str_cmp("phase")) {
       options.print_phase = cmd_read_on_off(options.print_phase);
-      uart_fputs(">Print phase=\t");
+      uart_fputs("# Print phase=\t");
       cmd_print_on_off(options.print_phase);
    } else {
       cmd_unknown();
@@ -293,28 +293,28 @@ void cmd_input(void) {
          options.input_a = 1;
          options.input_b = 1;
       }
-      uart_fputs(">Active Inputs=\t");
+      uart_fputs("# Active Inputs=\t");
       if (options.input_a) uart_fputc('A');
       if (options.input_b) uart_fputc('B');
       uart_fputs("\n");
-      uart_fputs(">Prescaler A=\t");
+      uart_fputs("# Prescaler A=\t");
       uart_fputc(options.prescaler_a + '0');
       uart_fputs("\tB=\t");
       uart_fputc(options.prescaler_b + '0');
       uart_fputs("\n");
    } else if (cmd_str_cmp("fast")) {
       options.fast_measure = cmd_read_on_off(options.fast_measure);
-      uart_fputs(">Fast measure=\t");
+      uart_fputs("# Fast measure=\t");
       cmd_print_on_off(options.fast_measure);
       counter_reset_inputs = 1;
    } else if (cmd_str_cmp("ctmu")) {
       options.ctmu_enable = cmd_read_on_off(options.ctmu_enable);
-      uart_fputs(">CTMU measure=\t");
+      uart_fputs("# CTMU measure=\t");
       cmd_print_on_off(options.ctmu_enable);
       counter_reset_inputs = 1;
    } else if (cmd_str_cmp("zcd")) {
       options.input_zcd = cmd_read_on_off(options.input_zcd);
-      uart_fputs(">Input Zero Cross Detection=\t");
+      uart_fputs("# Input Zero Cross Detection=\t");
       cmd_print_on_off(options.input_zcd);
       clc_input_a_zcd();
    } else {
@@ -327,9 +327,12 @@ void cmd_input(void) {
  * Show firmware version
  */
 void cmd_version(void) {
-   uart_fputs(">Version=\t");
+   uart_fputs("\n# Picuino Frequency Counter\n");
+   uart_fputs("# Version: ");
    uart_fputs(COUNTER_VERSION);
-   uart_fputs("\n");
+   uart_fputs("\n# Project on GitHub: https://github.com/picuino/freqcounter\n");
+   uart_fputs("# Contact: picuino@gmail.com\n\n");
+   uart_fflush();
 }
 
 
@@ -337,7 +340,7 @@ void cmd_version(void) {
  * Show "Unknown command" message
  */
 void cmd_unknown(void) {
-   uart_fputs(">Unknown command: ");
+   uart_fputs("# Unknown command: ");
    uart_fputs_ram(uart_rx_buffer);
    uart_fputs("\n");
 }

@@ -220,3 +220,10 @@ void uart_fputs_ram(char *str) {
       str++;
    }
 }
+
+/*
+ * Wait until transmit buffer is empty
+ */
+void uart_fflush(void) {
+   while(tx_buff_init != tx_buff_end);
+}

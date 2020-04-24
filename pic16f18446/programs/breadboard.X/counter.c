@@ -318,19 +318,19 @@ void counter_prescaler_channel_a(void) {
    // Select prescaler
    if (T2TMR < 2 && options.prescaler_a == 2) {
       clc_prescaler_a_off();
-      uart_fputs(">Prescaler A=\t1\n");
+      uart_fputs("# Prescaler A=\t1\n");
       counter_reset();
    }
    if (T2TMR > 10 && options.prescaler_a == 1) {
       clc_prescaler_a_on();
-      uart_fputs(">Prescaler A=\t2\n");
+      uart_fputs("# Prescaler A=\t2\n");
       counter_reset();
    }
 
    // Detects overrange
    if (T2TMR >= 48) {
       counter_overrange_input_a = 1;
-      uart_fputs(">Over range at input A\n");
+      uart_fputs("# Over range at input A\n");
    } else {
       counter_overrange_input_a = 0;
    }
@@ -366,19 +366,19 @@ void counter_prescaler_channel_b(void) {
    // Select prescaler
    if (T2TMR < 2 && options.prescaler_b == 2) {
       clc_prescaler_b_off();
-      uart_fputs(">Prescaler B=\t1\n");
+      uart_fputs("# Prescaler B=\t1\n");
       counter_reset();
    }
    if (T2TMR > 10 && options.prescaler_b == 1) {
       clc_prescaler_b_on();
-      uart_fputs(">Prescaler B=\t2\n");
+      uart_fputs("# Prescaler B=\t2\n");
       counter_reset();
    }
 
    // Detects overrange
    if (T2TMR >= 48) {
       counter_overrange_input_b = 1;
-      uart_fputs(">Over range at input B\n");
+      uart_fputs("# Over range at input B\n");
    } else {
       counter_overrange_input_b = 0;
    }

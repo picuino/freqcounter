@@ -21,7 +21,7 @@ void uart_free(unsigned char i);
 void uart_fputc(char c);
 void uart_fputs(const char *str);
 void uart_fputs_ram(char *str);
-
+void uart_fflush(void);
 
 #endif
 

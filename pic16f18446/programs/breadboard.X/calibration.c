@@ -187,7 +187,7 @@ void counter_autocalibrate(uint48 billion) {
       calibration.calibration_8mhz -= dfrequency;
    else
       calibration.calibration_5mhz -= dfrequency;
-   uart_fputs(">New calibration=\t");
+   uart_fputs("# New calibration=\t");
    print_long(cmd_get_calibration());
    uart_fputs("\n");
 }

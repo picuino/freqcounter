@@ -83,7 +83,6 @@ void cpu_init(void) {
    INTCONbits.GIE = 0;
 }
 
-
 /*
  *  MAIN FUNCTION
  */
@@ -105,7 +104,8 @@ void main(void) {
 
    // Enable interrupts and send wellcome message
    INTCONbits.GIE = 1;
-   uart_fputs("System OK\n");
+   counter_wait_period();
+   cmd_version();
    lcd_puts("System OK");
 
 
@@ -119,18 +119,17 @@ void main(void) {
       counter_prescaler_channel_a();
       counter_prescaler_channel_b();
 
-
       counter_wait_period();
       system_speed();
 
       if (counter_reset_inputs == 1) {
          counter_reset_inputs = 0;
-         uart_fputs(">Reset counters\n");
+         uart_fputs("# Reset counters\n");
          counter_reset();
          continue;
       }
 
-      counter_save_old_values();  
+      counter_save_old_values();
       ctmu_calibrate();
       counter_capture_channel_a();
       counter_capture_channel_b();
