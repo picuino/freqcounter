@@ -1,8 +1,8 @@
 Frequency counter Command Line Interface
 ========================================
-Brief description of the serial commands that accepts frequency counter.
+Brief description of the serial commands that accepts the frequency counter.
 
-The frequency counter communicates with PC via Serial. 
+The frequency counter communicates with PC via serial.
 A USB-Serial converter is needed in order to make serial communications.
 
 The configuration of serial interface is standard:
@@ -32,7 +32,8 @@ Outputs
 <dd>Disable printing of counted pulses during the sampling period.</dd>
 
 <dt>output longfreq on</dt>
-<dd>Enable printing of average frequency with more resolution.</dd>
+<dd>Enable printing of average frequency of last 10 readings 
+    with one digit of resolution added.</dd>
 
 <dt>output longfreq off</dt>
 <dd>Disable printing of average frequency.</dd>
@@ -44,10 +45,11 @@ Outputs
 <dd>Disable printing of frequency instead of period.</dd>
 
 <dt>output phase on</dt>
-<dd>Enable printing of time between 2 signals (time phase).</dd>
+<dd>Enable printing of time phase between 2 inputs. 
+    A minimal phase of 250us is needed between the inputs.</dd>
 
 <dt>output phase off</dt>
-<dd>Disable printing of phase between 2 signals.</dd>
+<dd>Disable printing of phase between 2 inputs.</dd>
 
 </dl>
 
@@ -74,7 +76,7 @@ Inputs
 
 
 <dt>input ctmu on</dt>
-<dd>Enable measurement of frequency with one decimal more resolution.
+<dd>Enable measurement of frequency with one digit more resolution.
     The measurement is developed with the charge of capacitor 
     (Charge Time Measurement Unit).</dd>
 
@@ -86,10 +88,10 @@ Inputs
 
 
 <dt>input fast on</dt>
-<dd>Enable fast measurement of frequency (measure every 100ms).</dd>
+<dd>Enable fast measurement of frequency (gate time of 0.1 second).</dd>
 
 <dt>input fast off</dt>
-<dd>Disable fast measurement of frequency (measure every second).</dd>
+<dd>Disable fast measurement of frequency (gate time of 1.0 second).</dd>
 
 <dt>input fast</dt>
 <dd>Return the actual value of fast measurement.</dd>
@@ -102,7 +104,7 @@ Inputs
 
 
 <dt>input zcd off</dt>
-<dd>Disable the ZCD input and conect the Input A.</dd>
+<dd>Disable the ZCD input and connect the Input A.</dd>
 
 
 Calibration
@@ -160,6 +162,6 @@ Version
 -------
 <dl>
 <dt>version</dt>
-<dd>Shows the version and date of the firmware.</dd>
+<dd>Shows the version date of the firmware.</dd>
 </dl>
 

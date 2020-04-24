@@ -1,25 +1,29 @@
 Frequency counter
 =================
 This is a design of a simple but powerful frequency counter capable 
-of measurements of frequency with 8 digits of precision every second.
+of measurements of frequency with 8 digits of precision every second
+(9 digits of precision in 10 second averages).
 
 This frequency counter is based on a little **PIC 16F18446** a 
 16x2 LCD display, and USB-Serial interface with PC.
 
-You can mount it over a breadboard with this simple 
-[schematic](pic16f18446/kicad/breadboard/freqcounter_16F18446.pdf)
-The LDC display is optional. All the info is sended via serial.
-
+All the programs and hardware designs are free, open source and
+open hardware.
 
 The frequency counter have a Command Line Interface via serial 
-communications for manage internal options. You can read more in 
-[Command Line Interface commands help](pic16f18446/docs/commands.md)
+communications for manage multiple internal options. 
+You can read more in [Command Line Interface help](pic16f18446/docs/commands.md)
+
+You can mount the frequency counter over a breadboard with this simple 
+[schematic](pic16f18446/kicad/breadboard/freqcounter_16F18446.pdf)
+with a cost of few dollars.
+The LDC display is optional. All the info is sended via serial.
 
 
 Specifications
 --------------
-* Input frequency range: 0.01 Hz to 15MHz
-* Resolution: 8 digits per second (10PPB) at all frequencies.
+* Input frequency range: 0.001 Hz to 15MHz
+* Resolution: 8 digits per second (10ns of resolution) at all frequencies.
 * Precision: 0.1PPM with simple crystal and calibration.
 * Number of inputs: 2 TTL inputs + 1 Zero Cross Detection input
 * Output: Frequency or Period, time and pulses counted.
