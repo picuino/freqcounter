@@ -6,6 +6,9 @@ of measurements of frequency with 8 digits of precision every second.
 This frequency counter is based on a little **PIC 16F18446** a 
 16x2 LCD display, and USB-Serial interface with PC.
 
+You can mount it over a breadboard with this simple 
+[schematic](pic16f18446/kicad/breadboard/freqcounter_16F18446.pdf)
+
 
 Specifications
 --------------
