@@ -1,6 +1,6 @@
 Frequency counter
 =================
-This is a design of a simple but powerful frequency counter capable 
+This is a cheap and simple but powerful frequency counter capable 
 of measurements of frequency with 8 digits of precision every second
 (9 digits of precision in 10 second averages).
 
@@ -12,10 +12,10 @@ open hardware.
 
 The frequency counter have a Command Line Interface via serial 
 communications for manage multiple internal options. 
-You can read more in [Command Line Interface help](pic16f18446/docs/commands.md)
+You can read more in [Command Line Interface help](docs/commands.md)
 
 You can mount the frequency counter over a breadboard with this simple 
-[schematic](pic16f18446/kicad/breadboard/freqcounter_16F18446.pdf)
+[schematic](breadboard/kicad/freqcounter_16F18446.pdf)
 with a cost of few dollars.
 The LDC display is optional. All the info is sended via serial.
 

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name PIC16F18446)(type Legacy)(uri ${KIPRJMOD}/PIC16F18446.lib)(options "")(descr ""))
+  (lib (name LCD_DISPLAY_16X2)(type Legacy)(uri ${KIPRJMOD}/LCD_DISPLAY_16X2.lib)(options "")(descr ""))
+)
