@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=breadboard.X
+PROJECTNAME=pic16f18446_prog.X
 
 # Active Configuration
 DEFAULTCONF=default
