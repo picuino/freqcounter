@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Picuino_16F18446.net
+LastNetListRead=
 PadDrill=0.762
 PadDrillOvalY=0.762
 PadSizeH=1.524

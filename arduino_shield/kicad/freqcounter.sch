@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:freqcounter_16F18446-cache
+LIBS:freqcounter-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -218,60 +218,10 @@ Text GLabel 5500 2600 2    40   Input ~ 0
 ICSPCLK
 Wire Wire Line
 	5500 2700 6900 2700
-$Comp
-L LCD_DISPLAY_16X2:LCD_DISPLAY_16X2 P1
-U 1 1 5EA1FBB9
-P 4200 4650
-F 0 "P1" H 6533 4550 50  0000 L CNN
-F 1 "LCD_DISPLAY_16X2" H 6533 4457 50  0000 L CNN
-F 2 "SIL-16" H 6533 4364 50  0000 L CNN
-F 3 "" H 4200 4650 50  0001 C CNN
-	1    4200 4650
-	1    0    0    -1  
-$EndComp
 Text GLabel 5500 3000 2    40   Input ~ 0
 LCD_RS
 Text GLabel 5500 3100 2    40   Input ~ 0
 LCD_E
-Text GLabel 4700 4400 1    40   Input ~ 0
-LCD_E
-Text GLabel 4500 4400 1    40   Input ~ 0
-LCD_RS
-Wire Wire Line
-	4600 4400 4600 4100
-Wire Wire Line
-	4600 4100 4800 4100
-Wire Wire Line
-	4800 4100 4800 4400
-Wire Wire Line
-	4800 4100 4900 4100
-Wire Wire Line
-	4900 4100 4900 4400
-Connection ~ 4800 4100
-Wire Wire Line
-	4900 4100 5000 4100
-Wire Wire Line
-	5000 4100 5000 4400
-Connection ~ 4900 4100
-Wire Wire Line
-	5000 4100 5100 4100
-Wire Wire Line
-	5100 4100 5100 4400
-Connection ~ 5000 4100
-Text GLabel 4600 4000 1    40   Input ~ 0
-GND
-Wire Wire Line
-	4600 4100 4600 4000
-Connection ~ 4600 4100
-Wire Wire Line
-	4600 4100 4400 4100
-Wire Wire Line
-	4400 4100 4400 4400
-Wire Wire Line
-	5100 4100 5700 4100
-Wire Wire Line
-	5700 4100 5700 4400
-Connection ~ 5100 4100
 Text GLabel 5500 3200 2    40   Input ~ 0
 LCD_D4
 Text GLabel 5500 3300 2    40   Input ~ 0
@@ -280,21 +230,6 @@ Text GLabel 4500 3300 0    40   Input ~ 0
 LCD_D7
 Text GLabel 4500 3200 0    40   Input ~ 0
 LCD_D6
-Text GLabel 5200 4400 1    40   Input ~ 0
-LCD_D4
-Text GLabel 5300 4400 1    40   Input ~ 0
-LCD_D5
-Text GLabel 5500 4400 1    40   Input ~ 0
-LCD_D7
-Text GLabel 5400 4400 1    40   Input ~ 0
-LCD_D6
-Wire Wire Line
-	4400 4100 4200 4100
-Wire Wire Line
-	4200 4100 4200 4400
-Connection ~ 4400 4100
-Text GLabel 4300 4400 1    40   Input ~ 0
-VDD
 Wire Wire Line
 	3750 2600 4500 2600
 Wire Wire Line

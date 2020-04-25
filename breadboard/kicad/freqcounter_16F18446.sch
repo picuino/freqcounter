@@ -30,10 +30,10 @@ F 3 "~" H 3900 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L Device:C C1
 U 1 1 5E6A67BE
 P 5000 2000
-F 0 "C5" V 4950 2050 50  0000 L CNN
+F 0 "C1" V 4950 2050 50  0000 L CNN
 F 1 "100nF" V 4850 1900 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5038 1850 50  0001 C CNN
 F 3 "~" H 5000 2000 50  0001 C CNN
@@ -41,10 +41,10 @@ F 3 "~" H 5000 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R1
+L Device:R R4
 U 1 1 5E71FB56
 P 3650 3200
-F 0 "R1" V 3750 3150 50  0000 L CNN
+F 0 "R4" V 3750 3150 50  0000 L CNN
 F 1 "1K" V 3650 3150 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3580 3200 50  0001 C CNN
 F 3 "~" H 3650 3200 50  0001 C CNN
@@ -52,10 +52,10 @@ F 3 "~" H 3650 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C1
+L Device:C C2
 U 1 1 5E71FBD7
 P 2850 3200
-F 0 "C1" V 2700 3150 50  0000 L CNN
+F 0 "C2" V 2700 3150 50  0000 L CNN
 F 1 "2.2nF" V 2600 3150 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2888 3050 50  0001 C CNN
 F 3 "~" H 2850 3200 50  0001 C CNN
@@ -73,7 +73,7 @@ F 3 "~" H 2700 3200 50  0001 C CNN
 	1    2700 3200
 	0    1    -1   0   
 $EndComp
-Text GLabel 6900 2700 2    40   Input ~ 0
+Text GLabel 7100 2700 2    40   Input ~ 0
 INPUT_ZCD
 $Comp
 L PIC16F18446:PIC16F18446 U1
@@ -108,10 +108,10 @@ F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3250 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R11
+L Device:R R2
 U 1 1 5E8D7C95
 P 5750 2800
-F 0 "R11" V 5700 2950 50  0000 L CNN
+F 0 "R2" V 5700 2950 50  0000 L CNN
 F 1 "180" V 5745 2725 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 2800 50  0001 C CNN
 F 3 "~" H 5750 2800 50  0001 C CNN
@@ -119,10 +119,10 @@ F 3 "~" H 5750 2800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R12
+L Device:R R3
 U 1 1 5E8DA958
 P 5750 2900
-F 0 "R12" V 5700 3050 50  0000 L CNN
+F 0 "R3" V 5700 3050 50  0000 L CNN
 F 1 "180" V 5745 2825 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 2900 50  0001 C CNN
 F 3 "~" H 5750 2900 50  0001 C CNN
@@ -216,8 +216,6 @@ Text GLabel 5500 2500 2    40   Input ~ 0
 ICSPDAT
 Text GLabel 5500 2600 2    40   Input ~ 0
 ICSPCLK
-Wire Wire Line
-	5500 2700 6900 2700
 $Comp
 L LCD_DISPLAY_16X2:LCD_DISPLAY_16X2 P1
 U 1 1 5EA1FBB9
@@ -258,20 +256,9 @@ Wire Wire Line
 Wire Wire Line
 	5100 4100 5100 4400
 Connection ~ 5000 4100
-Text GLabel 4600 4000 1    40   Input ~ 0
+Text GLabel 4100 4100 0    40   Input ~ 0
 GND
-Wire Wire Line
-	4600 4100 4600 4000
 Connection ~ 4600 4100
-Wire Wire Line
-	4600 4100 4400 4100
-Wire Wire Line
-	4400 4100 4400 4400
-Wire Wire Line
-	5100 4100 5700 4100
-Wire Wire Line
-	5700 4100 5700 4400
-Connection ~ 5100 4100
 Text GLabel 5500 3200 2    40   Input ~ 0
 LCD_D4
 Text GLabel 5500 3300 2    40   Input ~ 0
@@ -289,10 +276,7 @@ LCD_D7
 Text GLabel 5400 4400 1    40   Input ~ 0
 LCD_D6
 Wire Wire Line
-	4400 4100 4200 4100
-Wire Wire Line
 	4200 4100 4200 4400
-Connection ~ 4400 4100
 Text GLabel 4300 4400 1    40   Input ~ 0
 VDD
 Wire Wire Line
@@ -301,4 +285,40 @@ Wire Wire Line
 	4050 2450 4050 2500
 Wire Wire Line
 	4050 2500 4500 2500
+$Comp
+L Device:R R1
+U 1 1 5EA419F2
+P 6950 2700
+F 0 "R1" V 6850 2650 50  0000 L CNN
+F 1 "10k" V 6945 2625 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6880 2700 50  0001 C CNN
+F 3 "~" H 6950 2700 50  0001 C CNN
+	1    6950 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 2700 6800 2700
+Wire Wire Line
+	4200 4100 4600 4100
+$Comp
+L Device:R R5
+U 1 1 5EA4312D
+P 4550 3900
+F 0 "R5" V 4600 3650 50  0000 L CNN
+F 1 "180" V 4545 3825 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4480 3900 50  0001 C CNN
+F 3 "~" H 4550 3900 50  0001 C CNN
+	1    4550 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 4100 4200 4100
+Connection ~ 4200 4100
+Wire Wire Line
+	4400 3900 4400 4400
+Wire Wire Line
+	4700 3900 5100 3900
+Wire Wire Line
+	5100 3900 5100 4100
+Connection ~ 5100 4100
 $EndSCHEMATC
