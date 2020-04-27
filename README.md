@@ -22,7 +22,7 @@ The LDC display is optional. All the info is sended via serial.
 
 Specifications
 --------------
-* Input frequency range: 0.001 Hz to 15MHz
+* Input frequency range: 0.01 Hz to 15MHz
 * Resolution: 8 digits per second (10ns of resolution) at all frequencies.
 * Precision: 0.1PPM with simple crystal and calibration.
 * Number of inputs: 2 TTL inputs + 1 Zero Cross Detection input
@@ -31,13 +31,25 @@ Specifications
 * Gate times: 1 second and 0.1 seconds.
 * Output: via LCD and serial UART.
 * Autocalibration: with 1PPS signal or with 10MHz signal.
-* Continuous timestamp and reciprocal counting internal methods.
+* Reciprocal counting: allow calculate lower frequencies with decimals.
+* Continuous timestamp: allow frequency averages without error.
 * Frequency autorange from Mega Hertz to milli Hertz.
 * Adaptable system frequency without reprogramming (8MHz internal or 5MHz external)
 * Command Line Interface: via USB-serial communications for configuring options.
 * Input levels: between 0.8v (LOW) and 3.1V (HIGH).
 * Power Supply: 5 volts.
 * DIY: you can mount it with a breadboard and one crystal oscillator.
+
+
+Images
+------
+Example of frequency meter conected to an Arduino.
+Arduino gives power and serial communications with PC.
+
+Orange cables are the 2 TTL inputs.
+
+![Frequency meter on breadboard with Arduino](images/thumbs/IMG_20200427_143115_512.jpg)
+[Full image](images/IMG_20200427_143115.jpg)
 
 
 Licenses
