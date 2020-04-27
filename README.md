@@ -1,11 +1,11 @@
 Frequency counter
 =================
 This is a cheap and simple but powerful frequency counter capable 
-of measurements of frequency with 8 digits of precision every second
-(9 digits of precision in 10 second averages).
+of measurements of frequency with 8 digits of resolution every second
+(9 digits of resolution in 10 second averages).
 
 This frequency counter is based on a little **PIC 16F18446** a 
-16x2 LCD display, and USB-Serial interface with PC.
+16x2 LCD display (optional) and USB-Serial interface with PC.
 
 All the programs and hardware designs are free, open source and
 open hardware.
@@ -29,7 +29,7 @@ Specifications
 * Output: Frequency or Period, time and pulses counted.
 * Phase delay: between 2 inputs with 10ns of resolution.
 * Gate times: 1 second and 0.1 seconds.
-* Output: via LCD and serial UART.
+* Output: via LCD (optional) and serial UART.
 * Autocalibration: with 1PPS signal or with 10MHz signal.
 * Reciprocal counting: allow calculate lower frequencies with decimals.
 * Continuous timestamp: allow frequency averages without error.
@@ -49,6 +49,7 @@ Arduino gives power and serial communications with PC.
 Orange cables are the 2 TTL inputs.
 
 ![Frequency meter on breadboard with Arduino](images/thumbs/IMG_20200427_143115_512.jpg)
+
 [Full image](images/IMG_20200427_143115.jpg)
 
 
