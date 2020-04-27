@@ -131,8 +131,7 @@ void main(void) {
 
       counter_save_old_values();
       ctmu_calibrate();
-      counter_capture_channel_a();
-      counter_capture_channel_b();
+      counter_capture_channels();
 
       counter_print_channel_a();
       counter_print_channel_b();

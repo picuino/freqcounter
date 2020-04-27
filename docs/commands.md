@@ -46,7 +46,7 @@ Outputs
 
 <dt>output phase on</dt>
 <dd>Enable printing of time phase between 2 inputs. 
-    A minimal phase of 250us is needed between the inputs.</dd>
+    A minimal phase of 110us is needed between the inputs.</dd>
 
 <dt>output phase off</dt>
 <dd>Disable printing of phase between 2 inputs.</dd>

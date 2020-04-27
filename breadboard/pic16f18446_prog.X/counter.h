@@ -61,12 +61,13 @@ void counter_buffer_inc(void);
 void counter_unprescaler(char prescaler);
 void counter_reset(void);
 
+void counter_capture_channels(void);
+void counter_adjust_time_ctmu(void);
+
 void counter_prescaler_channel_a(void);
-void counter_capture_channel_a(void);
 void counter_print_channel_a(void);
 
 void counter_prescaler_channel_b(void);
-void counter_capture_channel_b(void);
 void counter_print_channel_b(void);
 
 void counter_print_end(void);

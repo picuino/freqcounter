@@ -44,6 +44,7 @@ uint48 pulses_b_old, time_b_old;
 uint48 dpulses, dtime, dpulsesf, dtimef;
 char buff_init, buff_end;
 options_t options;
+unsigned int ctmu, ctmu_a, ctmu_b;
 unsigned long millis;
 unsigned char blink_lcd_state;
 unsigned char counter_reset_inputs;
@@ -140,8 +141,6 @@ void counter_period_b(void) {
  * Read CTMU for more precise time measure
  */
 void counter_capture(void) {
-   unsigned int ctmu;
-
    // discharge ctmu capacitor
    ctmu_discharge();
 
@@ -159,32 +158,8 @@ void counter_capture(void) {
    CLC3_DATA = 0;
 
    // Read CTMU capacitor with ADC
-   ctmu = adc_read();
-
-   // Compute time adjust
-   ctmu *= ctmu_constant;
-   ctmu >>= 8;
-
-   if (options.ctmu_enable) {
-      temp.byte[5] = time.byte[5];
-      time.byte[5] = time.byte[4];
-      time.byte[4] = time.byte[3];
-      time.byte[3] = time.byte[2];
-      time.byte[2] = time.byte[1];
-      time.byte[1] = time.byte[0];
-      time.byte[0] = 0x00;
-
-      // Shift right (Divide by 2)
-      time = sr48(time);
-      time.b47 = temp.b40;
-
-      // copy ctmu to temp
-      temp.dword = 0;
-      temp.word[0] = ctmu;
-
-      // time = time - ctmu
-      time = sub48(time, temp);
-   }
+   if (options.ctmu_enable)
+      ctmu = adc_read();
 }
 
 
@@ -259,8 +234,7 @@ void counter_reset(void) {
 
    // Wait for Input A pulse and capture
    ctmu_calibrate();
-   counter_capture_channel_a();
-   counter_capture_channel_b();
+   counter_capture_channels();
 
    // Inits buffer
    buff_init = 0;
@@ -409,32 +383,66 @@ void counter_save_old_values(void) {
 /*
  * Measure frequency in channel A
  */
-void counter_capture_channel_a(void) {
+void counter_capture_channels(void) {
 
-   if (options.input_a == 0)
-      return;
+   if (options.input_a) {
+      // Wait for input pulse and capture A
+      clc_capture_channel_a();
+      counter_capturing_channel = INPUT_A;
+      counter_capture();
+      ctmu_a = ctmu;
+      time_a = time;
+   }
 
-   // Wait for input pulse and capture
-   clc_capture_channel_a();
-   counter_capturing_channel = INPUT_A;
-   counter_capture();
-   time_a = time;
+   if (options.input_b) {
+      // Wait for input pulse and capture
+      clc_capture_channel_b();
+      counter_capturing_channel = INPUT_B;
+      counter_capture();
+      ctmu_b = ctmu;
+      time_b = time;
+   }
+
+   // Compute time adjust
+   if (options.ctmu_enable && options.input_b) {
+      counter_adjust_time_ctmu();
+      time_b = time;
+   }
+
+   if (options.ctmu_enable && options.input_a) {
+      time = time_a;
+      ctmu = ctmu_a;
+      counter_adjust_time_ctmu();
+      time_a = time;
+   }
 }
 
 
 /*
- * Measure frequency in channel B
+ * Add ctmu value to Time
  */
-void counter_capture_channel_b(void) {
+void counter_adjust_time_ctmu(void) {
+   ctmu *= ctmu_constant;
+   ctmu >>= 8;
 
-   if (options.input_b == 0)
-      return;
+   temp.byte[5] = time.byte[5];
+   time.byte[5] = time.byte[4];
+   time.byte[4] = time.byte[3];
+   time.byte[3] = time.byte[2];
+   time.byte[2] = time.byte[1];
+   time.byte[1] = time.byte[0];
+   time.byte[0] = 0x00;
 
-   // Wait for input pulse and capture
-   clc_capture_channel_b();
-   counter_capturing_channel = INPUT_B;
-   counter_capture();
-   time_b = time;
+   // Shift right (Divide by 2)
+   time = sr48(time);
+   time.b47 = temp.b40;
+
+   // copy ctmu to temp
+   temp.dword = 0;
+   temp.word[0] = ctmu;
+
+   // time = time - ctmu
+   time = sub48(time, temp);
 }
 
 
