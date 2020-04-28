@@ -270,7 +270,7 @@ U 1 1 5EA5AAAC
 P 6500 4000
 F 0 "U2" H 6800 4258 60  0000 C CNN
 F 1 "TCXO" H 6800 4148 60  0000 C CNN
-F 2 "" H 6700 3950 60  0001 C CNN
+F 2 "Footprints:TCXO-5032" H 6700 3950 60  0001 C CNN
 F 3 "" H 6700 3950 60  0000 C CNN
 	1    6500 4000
 	1    0    0    -1  
@@ -608,4 +608,41 @@ Wire Notes Line
 	3500 600  600  600 
 Wire Notes Line
 	600  3100 600  600 
+Text GLabel 8800 4100 3    40   Input ~ 0
+SCL
+Text GLabel 8900 4100 3    40   Input ~ 0
+SDA
+$Comp
+L Device:R R5
+U 1 1 5EA92C67
+P 8800 3950
+F 0 "R5" V 8750 4100 50  0000 L CNN
+F 1 "10K" V 8795 3875 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8730 3950 50  0001 C CNN
+F 3 "~" H 8800 3950 50  0001 C CNN
+	1    8800 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5EA92CFB
+P 8900 3950
+F 0 "R6" V 8850 4100 50  0000 L CNN
+F 1 "10K" V 8895 3875 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8830 3950 50  0001 C CNN
+F 3 "~" H 8900 3950 50  0001 C CNN
+	1    8900 3950
+	-1   0    0    -1  
+$EndComp
+Text GLabel 8800 3600 1    40   Input ~ 0
+VDD
+Wire Wire Line
+	8800 3600 8800 3650
+Wire Wire Line
+	8800 3650 8900 3650
+Wire Wire Line
+	8900 3650 8900 3800
+Connection ~ 8800 3650
+Wire Wire Line
+	8800 3650 8800 3800
 $EndSCHEMATC
