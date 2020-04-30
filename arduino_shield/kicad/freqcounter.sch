@@ -49,17 +49,6 @@ F 3 "~" H 4550 3200 50  0001 C CNN
 	1    4550 3200
 	0    1    -1   0   
 $EndComp
-$Comp
-L power:Earth #PWR01
-U 1 1 5E71FD1E
-P 4400 3200
-F 0 "#PWR01" H 4400 2950 50  0001 C CNN
-F 1 "Earth" H 4400 3050 50  0001 C CNN
-F 2 "" H 4400 3200 50  0001 C CNN
-F 3 "~" H 4400 3200 50  0001 C CNN
-	1    4400 3200
-	0    1    -1   0   
-$EndComp
 Text GLabel 8000 2700 2    40   Input ~ 0
 INPUT_ZCD
 Text GLabel 6700 900  0    40   Input ~ 0
@@ -68,9 +57,9 @@ Text GLabel 6700 1000 0    40   Input ~ 0
 5V
 Text GLabel 6700 1100 0    40   Input ~ 0
 GND
-Text GLabel 6200 2800 0    40   Input ~ 0
+Text GLabel 5500 2800 0    40   Input ~ 0
 INPUT_A
-Text GLabel 6200 2900 0    40   Input ~ 0
+Text GLabel 5500 2900 0    40   Input ~ 0
 INPUT_B
 $Comp
 L Diode:1N4148W D1
@@ -192,7 +181,7 @@ Text GLabel 1200 1300 2    40   Input ~ 0
 3.3V
 Text GLabel 8000 3200 2    40   Input ~ 0
 ARD_TX
-Text GLabel 7200 3300 2    40   Input ~ 0
+Text GLabel 8000 3300 2    40   Input ~ 0
 ARD_RX
 Text GLabel 6200 3300 0    40   Input ~ 0
 SCL
@@ -543,7 +532,7 @@ L Device:R R5
 U 1 1 5EA92C67
 P 8800 3950
 F 0 "R5" V 8750 4100 50  0000 L CNN
-F 1 "10K" V 8795 3875 50  0000 L CNN
+F 1 "2K2" V 8795 3875 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8730 3950 50  0001 C CNN
 F 3 "~" H 8800 3950 50  0001 C CNN
 	1    8800 3950
@@ -554,7 +543,7 @@ L Device:R R6
 U 1 1 5EA92CFB
 P 8900 3950
 F 0 "R6" V 8850 4100 50  0000 L CNN
-F 1 "10K" V 8895 3875 50  0000 L CNN
+F 1 "2K2" V 8895 3875 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8830 3950 50  0001 C CNN
 F 3 "~" H 8900 3950 50  0001 C CNN
 	1    8900 3950
@@ -687,4 +676,47 @@ Wire Wire Line
 Connection ~ 2600 1300
 Wire Wire Line
 	2600 1300 2500 1300
+$Comp
+L Device:R R8
+U 1 1 5EABD611
+P 5650 2800
+F 0 "R8" V 5600 2950 50  0000 L CNN
+F 1 "180" V 5645 2725 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5580 2800 50  0001 C CNN
+F 3 "~" H 5650 2800 50  0001 C CNN
+	1    5650 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5EABD6A7
+P 5650 2900
+F 0 "R9" V 5600 3050 50  0000 L CNN
+F 1 "180" V 5645 2825 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5580 2900 50  0001 C CNN
+F 3 "~" H 5650 2900 50  0001 C CNN
+	1    5650 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 2800 6200 2800
+Wire Wire Line
+	5800 2900 6200 2900
+$Comp
+L Device:R R7
+U 1 1 5EAC87AA
+P 7650 3300
+F 0 "R7" V 7600 3450 50  0000 L CNN
+F 1 "180" V 7645 3225 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 3300 50  0001 C CNN
+F 3 "~" H 7650 3300 50  0001 C CNN
+	1    7650 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 3300 8000 3300
+Wire Wire Line
+	7500 3300 7200 3300
+Text GLabel 4400 3200 0    40   Input ~ 0
+GND
 $EndSCHEMATC
