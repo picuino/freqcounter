@@ -1,4 +1,20 @@
-Cmp-Mod V01 Created by PcbNew   date = 30/04/2020 15:13:39
+Cmp-Mod V01 Created by PcbNew   date = 30/04/2020 20:24:22
+
+BeginCmp
+TimeStamp = 5EB4FA6D
+Path = /5EA5AAAC
+Reference = U2;
+ValeurCmp = TCXO;
+IdModule  = Footprints:TCXO-5032;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EB48773
+Path = /5EA73E5B
+Reference = R4;
+ValeurCmp = 1M;
+IdModule  = Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;
+EndCmp
 
 BeginCmp
 TimeStamp = 5EB4FCE6
@@ -105,14 +121,6 @@ IdModule  = Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder;
 EndCmp
 
 BeginCmp
-TimeStamp = 5EB485B6
-Path = /5E78AE06
-Reference = D1;
-ValeurCmp = 1N4148;
-IdModule  = Diode_SMD:D_SOD-123;
-EndCmp
-
-BeginCmp
 TimeStamp = 5EB4FB4C
 Path = /5EA5D5B7
 Reference = J10;
@@ -177,22 +185,6 @@ IdModule  = Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;
 EndCmp
 
 BeginCmp
-TimeStamp = 5EB48773
-Path = /5EA73E5B
-Reference = R4;
-ValeurCmp = 1M;
-IdModule  = Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;
-EndCmp
-
-BeginCmp
-TimeStamp = 5EB4FA6D
-Path = /5EA5AAAC
-Reference = U2;
-ValeurCmp = TCXO;
-IdModule  = Footprints:TCXO-5032;
-EndCmp
-
-BeginCmp
 TimeStamp = 5EAABFCB
 Path = /5EA92C67
 Reference = R5;
@@ -230,6 +222,14 @@ Path = /5EACC1E4
 Reference = J8;
 ValeurCmp = Digital_1;
 IdModule  = Footprints:Connector_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EB78ADE
+Path = /5E78AE06
+Reference = D1;
+ValeurCmp = 1N4148;
+IdModule  = Footprints:SOD-80_HandSolder;
 EndCmp
 
 EndListe
