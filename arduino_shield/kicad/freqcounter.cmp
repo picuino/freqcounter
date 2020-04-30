@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew   date = 28/04/2020 21:12:06
+Cmp-Mod V01 Created by PcbNew   date = 30/04/2020 15:13:39
 
 BeginCmp
 TimeStamp = 5EB4FCE6
@@ -25,14 +25,6 @@ IdModule  = Footprints:Connector_1x06;
 EndCmp
 
 BeginCmp
-TimeStamp = 5EB48651
-Path = /5EA9244B
-Reference = J6;
-ValeurCmp = Analog;
-IdModule  = Footprints:Connector_1x04;
-EndCmp
-
-BeginCmp
 TimeStamp = 5EB486A1
 Path = /5EA43462
 Reference = J9;
@@ -46,22 +38,6 @@ Path = /5EA433A3
 Reference = J4;
 ValeurCmp = Arduino_Digital_2;
 IdModule  = Footprints:Connector_1x08;
-EndCmp
-
-BeginCmp
-TimeStamp = 5EB48639
-Path = /5EAA5BE8
-Reference = J5;
-ValeurCmp = Digital_2;
-IdModule  = Footprints:Connector_1x06;
-EndCmp
-
-BeginCmp
-TimeStamp = 5EB49299
-Path = /5EA891A7
-Reference = J8;
-ValeurCmp = Digital_1;
-IdModule  = Footprints:Connector_1x06;
 EndCmp
 
 BeginCmp
@@ -177,7 +153,7 @@ IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical;
 EndCmp
 
 BeginCmp
-TimeStamp = 5EB48740
+TimeStamp = 5EAAD404
 Path = /5EA4B9B0
 Reference = R1;
 ValeurCmp = 10K;
@@ -210,10 +186,50 @@ EndCmp
 
 BeginCmp
 TimeStamp = 5EB4FA6D
-Path = 
+Path = /5EA5AAAC
 Reference = U2;
-ValeurCmp = ECS-TXO-5032-250-TR;
+ValeurCmp = TCXO;
 IdModule  = Footprints:TCXO-5032;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EAABFCB
+Path = /5EA92C67
+Reference = R5;
+ValeurCmp = 10K;
+IdModule  = Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EAABFDC
+Path = /5EA92CFB
+Reference = R6;
+ValeurCmp = 10K;
+IdModule  = Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EAAC10F
+Path = /5EAEC8C6
+Reference = J5;
+ValeurCmp = Digital_2;
+IdModule  = Footprints:Connector_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EAAC123
+Path = /5EAB060A
+Reference = J6;
+ValeurCmp = Analog;
+IdModule  = Footprints:Connector_1x06;
+EndCmp
+
+BeginCmp
+TimeStamp = 5EAAC139
+Path = /5EACC1E4
+Reference = J8;
+ValeurCmp = Digital_1;
+IdModule  = Footprints:Connector_1x08;
 EndCmp
 
 EndListe

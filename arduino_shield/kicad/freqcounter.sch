@@ -65,7 +65,7 @@ INPUT_ZCD
 Text GLabel 6700 900  0    40   Input ~ 0
 MCLR
 Text GLabel 6700 1000 0    40   Input ~ 0
-VDD
+5V
 Text GLabel 6700 1100 0    40   Input ~ 0
 GND
 Text GLabel 6200 2800 0    40   Input ~ 0
@@ -133,7 +133,7 @@ L Connector:Conn_01x08_Male J4
 U 1 1 5EA433A3
 P 2900 1500
 F 0 "J4" H 2800 1500 50  0000 C CNN
-F 1 "Arduino_Digital_2" H 3000 1950 50  0000 C CNN
+F 1 "Arduino_Digital_2" H 2800 1950 50  0000 C CNN
 F 2 "Footprints:Connector_1x08" H 2900 1500 50  0001 C CNN
 F 3 "~" H 2900 1500 50  0001 C CNN
 	1    2900 1500
@@ -174,13 +174,13 @@ F 3 "~" H 1000 1400 50  0001 C CNN
 $EndComp
 Text Notes 1200 900  0    100  ~ 0
 ARDUINO INTERFACE
-Text GLabel 1200 2700 2    40   Input ~ 0
+Text GLabel 1400 2900 2    40   Input ~ 0
 SCL
-Text GLabel 1200 2600 2    40   Input ~ 0
+Text GLabel 1400 2800 2    40   Input ~ 0
 SDA
-Text GLabel 2700 2900 0    40   Input ~ 0
+Text GLabel 2500 3100 0    40   Input ~ 0
 ARD_RX
-Text GLabel 2700 2800 0    40   Input ~ 0
+Text GLabel 2500 3000 0    40   Input ~ 0
 ARD_TX
 Text GLabel 1200 1600 2    40   Input ~ 0
 GND
@@ -190,15 +190,13 @@ Text GLabel 1200 1400 2    40   Input ~ 0
 5V
 Text GLabel 1200 1300 2    40   Input ~ 0
 3.3V
-Text GLabel 2700 1300 0    40   Input ~ 0
-GND
-Text GLabel 8000 2800 2    40   Input ~ 0
+Text GLabel 8000 3200 2    40   Input ~ 0
 ARD_TX
-Text GLabel 7200 2900 2    40   Input ~ 0
+Text GLabel 7200 3300 2    40   Input ~ 0
 ARD_RX
-Text GLabel 7200 3100 2    40   Input ~ 0
+Text GLabel 6200 3300 0    40   Input ~ 0
 SCL
-Text GLabel 7200 3000 2    40   Input ~ 0
+Text GLabel 6200 3200 0    40   Input ~ 0
 SDA
 $Comp
 L Device:R R1
@@ -218,18 +216,18 @@ Wire Wire Line
 $Comp
 L Device:R R2
 U 1 1 5EA58FDB
-P 7650 2800
-F 0 "R2" V 7600 2950 50  0000 L CNN
-F 1 "180" V 7645 2725 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 2800 50  0001 C CNN
-F 3 "~" H 7650 2800 50  0001 C CNN
-	1    7650 2800
+P 7650 3200
+F 0 "R2" V 7600 3350 50  0000 L CNN
+F 1 "180" V 7645 3125 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 3200 50  0001 C CNN
+F 3 "~" H 7650 3200 50  0001 C CNN
+	1    7650 3200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8000 2800 7800 2800
+	8000 3200 7800 3200
 Wire Wire Line
-	7500 2800 7200 2800
+	7500 3200 7200 3200
 $Comp
 L Device:C C1
 U 1 1 5EA59BE1
@@ -395,7 +393,7 @@ F 3 "~" H 7400 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 7700 5100 2    40   Input ~ 0
-VDD
+5V
 Wire Wire Line
 	7700 4900 7600 4900
 Wire Wire Line
@@ -422,7 +420,7 @@ F 3 "~" H 8100 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 8400 5100 2    40   Input ~ 0
-VDD
+5V
 Wire Wire Line
 	8400 4900 8300 4900
 Wire Wire Line
@@ -431,13 +429,13 @@ Text GLabel 8400 4900 2    40   Input ~ 0
 SCL
 Text GLabel 8400 5000 2    40   Input ~ 0
 SDA
-Text GLabel 7200 3200 2    40   Input ~ 0
+Text GLabel 7200 2800 2    40   Input ~ 0
 P3
-Text GLabel 7200 3300 2    40   Input ~ 0
+Text GLabel 7200 2900 2    40   Input ~ 0
 P2
-Text GLabel 6200 3200 0    40   Input ~ 0
+Text GLabel 7200 3100 2    40   Input ~ 0
 P0
-Text GLabel 6200 3300 0    40   Input ~ 0
+Text GLabel 7200 3000 2    40   Input ~ 0
 P1
 Text GLabel 9100 5200 2    40   Input ~ 0
 P3
@@ -450,7 +448,7 @@ P1
 Text GLabel 9100 5600 2    40   Input ~ 0
 GND
 Text GLabel 9100 4900 2    40   Input ~ 0
-VDD
+5V
 Wire Wire Line
 	9100 4900 9000 4900
 Wire Wire Line
@@ -507,72 +505,6 @@ Wire Wire Line
 	9100 5500 9000 5500
 Text GLabel 6100 2400 0    40   Input ~ 0
 5V
-$Comp
-L Connector:Conn_01x06_Female J8
-U 1 1 5EA891A7
-P 2400 2400
-F 0 "J8" H 2500 2400 50  0000 C CNN
-F 1 "Digital_1" H 2350 2750 50  0000 C CNN
-F 2 "Footprints:Connector_1x06" H 2400 2400 50  0001 C CNN
-F 3 "~" H 2400 2400 50  0001 C CNN
-	1    2400 2400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J6
-U 1 1 5EA9244B
-P 1500 2300
-F 0 "J6" H 1528 2275 50  0000 L CNN
-F 1 "Analog" H 1350 2550 50  0000 L CNN
-F 2 "Footprints:Connector_1x04" H 1500 2300 50  0001 C CNN
-F 3 "~" H 1500 2300 50  0001 C CNN
-	1    1500 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 2200 1300 2200
-Wire Wire Line
-	1300 2300 1200 2300
-Wire Wire Line
-	1200 2400 1300 2400
-Wire Wire Line
-	1300 2500 1200 2500
-Wire Wire Line
-	2600 2200 2700 2200
-Wire Wire Line
-	2700 2300 2600 2300
-Wire Wire Line
-	2600 2400 2700 2400
-Wire Wire Line
-	2700 2500 2600 2500
-Wire Wire Line
-	2600 2600 2700 2600
-Wire Wire Line
-	2700 2700 2600 2700
-NoConn ~ 2700 1200
-$Comp
-L Connector:Conn_01x06_Female J5
-U 1 1 5EAA5BE8
-P 2400 1600
-F 0 "J5" H 2500 1400 50  0000 C CNN
-F 1 "Digital_2" V 2500 1700 50  0000 C CNN
-F 2 "Footprints:Connector_1x06" H 2400 1600 50  0001 C CNN
-F 3 "~" H 2400 1600 50  0001 C CNN
-	1    2400 1600
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 1400 2700 1400
-Wire Wire Line
-	2700 1500 2600 1500
-Wire Wire Line
-	2600 1600 2700 1600
-Wire Wire Line
-	2700 1700 2600 1700
-Wire Wire Line
-	2600 1800 2700 1800
-Wire Wire Line
-	2700 1900 2600 1900
 Text GLabel 1200 1200 2    40   Input ~ 0
 Reset
 Text GLabel 1200 1700 2    40   Input ~ 0
@@ -601,13 +533,7 @@ Reset
 Text GLabel 1800 1700 2    40   Input ~ 0
 Vin
 Wire Notes Line
-	600  3100 3500 3100
-Wire Notes Line
-	3500 3100 3500 600 
-Wire Notes Line
 	3500 600  600  600 
-Wire Notes Line
-	600  3100 600  600 
 Text GLabel 8800 4100 3    40   Input ~ 0
 SCL
 Text GLabel 8900 4100 3    40   Input ~ 0
@@ -635,7 +561,7 @@ F 3 "~" H 8900 3950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text GLabel 8800 3600 1    40   Input ~ 0
-VDD
+5V
 Wire Wire Line
 	8800 3600 8800 3650
 Wire Wire Line
@@ -645,4 +571,120 @@ Wire Wire Line
 Connection ~ 8800 3650
 Wire Wire Line
 	8800 3650 8800 3800
+$Comp
+L Connector:Conn_01x06_Female J6
+U 1 1 5EAB060A
+P 1600 2400
+F 0 "J6" H 1628 2375 50  0000 L CNN
+F 1 "Analog" H 1400 2750 50  0000 L CNN
+F 2 "Footprints:Connector_1x06" H 1600 2400 50  0001 C CNN
+F 3 "~" H 1600 2400 50  0001 C CNN
+	1    1600 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2200 1400 2200
+Wire Wire Line
+	1200 2300 1400 2300
+Wire Wire Line
+	1200 2400 1400 2400
+Wire Wire Line
+	1200 2500 1400 2500
+Wire Wire Line
+	1200 2600 1300 2600
+Wire Wire Line
+	1200 2700 1400 2700
+Wire Wire Line
+	1200 2700 1200 2900
+Wire Wire Line
+	1200 2900 1400 2900
+Connection ~ 1200 2700
+Wire Wire Line
+	1400 2800 1300 2800
+Wire Wire Line
+	1300 2800 1300 2600
+Connection ~ 1300 2600
+Wire Wire Line
+	1300 2600 1400 2600
+Wire Wire Line
+	2500 3100 2700 3100
+Wire Wire Line
+	2700 3100 2700 2900
+Wire Wire Line
+	2500 3000 2600 3000
+Wire Wire Line
+	2600 3000 2600 2800
+Wire Wire Line
+	2600 2800 2700 2800
+$Comp
+L Connector:Conn_01x08_Female J8
+U 1 1 5EACC1E4
+P 2300 2500
+F 0 "J8" H 2328 2475 50  0000 L CNN
+F 1 "Digital_1" H 2100 2950 50  0000 L CNN
+F 2 "Footprints:Connector_1x08" H 2300 2500 50  0001 C CNN
+F 3 "~" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2900 2700 2900
+Connection ~ 2700 2900
+Wire Wire Line
+	2600 2800 2500 2800
+Connection ~ 2600 2800
+Wire Wire Line
+	2500 2700 2700 2700
+Wire Wire Line
+	2500 2600 2700 2600
+Wire Wire Line
+	2500 2500 2700 2500
+Wire Wire Line
+	2500 2400 2700 2400
+Wire Wire Line
+	2500 2300 2700 2300
+Wire Wire Line
+	2500 2200 2700 2200
+Wire Notes Line
+	600  600  600  3300
+Wire Notes Line
+	600  3300 3500 3300
+Wire Notes Line
+	3500 3300 3500 600 
+$Comp
+L Connector:Conn_01x08_Female J5
+U 1 1 5EAEC8C6
+P 2300 1500
+F 0 "J5" H 2328 1475 50  0000 L CNN
+F 1 "Digital_2" H 2100 1950 50  0000 L CNN
+F 2 "Footprints:Connector_1x08" H 2300 1500 50  0001 C CNN
+F 3 "~" H 2300 1500 50  0001 C CNN
+	1    2300 1500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1400 2700 1400
+Wire Wire Line
+	2500 1500 2700 1500
+Wire Wire Line
+	2500 1600 2700 1600
+Wire Wire Line
+	2500 1700 2700 1700
+Wire Wire Line
+	2500 1800 2700 1800
+Wire Wire Line
+	2500 1900 2700 1900
+Wire Wire Line
+	2700 1200 2500 1200
+Wire Wire Line
+	2700 1300 2600 1300
+Text GLabel 2250 1250 0    40   Input ~ 0
+GND
+Wire Wire Line
+	2250 1250 2600 1250
+Wire Wire Line
+	2600 1250 2600 1300
+Connection ~ 2600 1300
+Wire Wire Line
+	2600 1300 2500 1300
 $EndSCHEMATC
