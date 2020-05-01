@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source D:\Picuino\Projects\PC202_Frequency_counter\arduino_shield\kicad\freqcounter.sch)
-    (date "01/05/2020 14:15:03")
+    (date "01/05/2020 14:25:44")
     (tool "Eeschema (5.0.1)-4")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -121,7 +121,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5EA5ADAA))
     (comp (ref C4)
-      (value 100nF)
+      (value 1nF)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder)
       (datasheet ~)
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
