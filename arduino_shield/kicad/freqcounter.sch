@@ -68,7 +68,7 @@ P 5050 3200
 F 0 "D1" H 5100 3100 50  0000 R CNN
 F 1 "1N4148" H 5200 3000 50  0000 R CNN
 F 2 "Footprints:SOD-80_HandSolder" H 5050 3025 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 5050 3200 50  0001 C CNN
+F 3 "LS4148-GS18" H 5050 3200 50  0001 C CNN
 	1    5050 3200
 	1    0    0    -1  
 $EndComp
@@ -245,7 +245,7 @@ P 6700 2350
 F 0 "U1" H 6700 2523 50  0000 C CNN
 F 1 "PIC16F18446" H 6700 2430 50  0000 C CNN
 F 2 "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" H 6700 2350 50  0001 C CNN
-F 3 "" H 6700 2350 50  0001 C CNN
+F 3 "PIC16F18446-I/SO" H 6700 1300 50  0000 C CNN
 	1    6700 2350
 	1    0    0    -1  
 $EndComp
@@ -281,7 +281,7 @@ Wire Wire Line
 	6200 4000 6500 4000
 Connection ~ 6200 4000
 Wire Wire Line
-	6200 4300 7100 4300
+	6200 4300 6500 4300
 Wire Wire Line
 	7100 4300 7100 4150
 Text GLabel 6000 4300 0    40   Input ~ 0
@@ -289,7 +289,7 @@ GND
 Wire Wire Line
 	6200 4300 6000 4300
 Connection ~ 6200 4300
-Text GLabel 7500 4000 2    40   Input ~ 0
+Text GLabel 8200 4000 2    40   Input ~ 0
 32MHz
 Wire Wire Line
 	7200 4000 7100 4000
@@ -719,4 +719,39 @@ Wire Wire Line
 	7500 3300 7200 3300
 Text GLabel 4400 3200 0    40   Input ~ 0
 GND
+$Comp
+L Device:Jumper JP1
+U 1 1 5EAC4D9A
+P 7800 4000
+F 0 "JP1" H 7800 4272 50  0000 C CNN
+F 1 "Jumper" H 7800 4179 50  0000 C CNN
+F 2 "Footprints:PinHeader_1x02" H 7800 4000 50  0001 C CNN
+F 3 "~" H 7800 4000 50  0001 C CNN
+	1    7800 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4150 6500 4300
+Connection ~ 6500 4300
+Wire Wire Line
+	6500 4300 7100 4300
+Connection ~ 7100 4300
+$Comp
+L Connector:Conn_01x02_Male J16
+U 1 1 5EAD5B8E
+P 8300 4300
+F 0 "J16" H 8272 4179 50  0000 R CNN
+F 1 "Ext_Clk" H 8272 4272 50  0000 R CNN
+F 2 "Footprints:PinHeader_1x02" H 8300 4300 50  0001 C CNN
+F 3 "~" H 8300 4300 50  0001 C CNN
+	1    8300 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8100 4200 8100 4000
+Wire Wire Line
+	7100 4300 8100 4300
+Wire Wire Line
+	8200 4000 8100 4000
+Connection ~ 8100 4000
 $EndSCHEMATC
