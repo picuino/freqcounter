@@ -37,8 +37,8 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>../kicad/freqcounter_16F18446.pdf</itemPath>
       <itemPath>../../docs/PIC16F18446.pdf</itemPath>
+      <itemPath>../kicad/freqcounter.pdf</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

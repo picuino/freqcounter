@@ -64,13 +64,13 @@ void uart_isr(void) {
  */
 void uart_pps(void) {
    // Config TX PPS
-   RC0PPS = 0x0F; // RC0 (PIN_16) = 0x0F = TX1
-   TRISCbits.TRISC0 = 0;
+   RB5PPS = 0x0F; // RC0 (PIN_16) = 0x0F = TX1
+   TRISBbits.TRISB5 = 0;
 
    // Config RC PPS
-   RX1PPS = 0x11; // 0x11 = RC1
-   TRISCbits.TRISC1 = 1;
-   WPUCbits.WPUC1 = 1;
+   RX1PPS = 0b1110; // 0b00 1110 = RB6
+   TRISBbits.TRISB6 = 1;
+   WPUBbits.WPUB6 = 1;   // Prevent noise with the input not connected
 }
 
 

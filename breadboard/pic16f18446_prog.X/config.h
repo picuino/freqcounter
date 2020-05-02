@@ -9,7 +9,7 @@
  *
  */
 
-#define COUNTER_VERSION         "2020-april-24"
+#define COUNTER_VERSION         "2020-05-02"
 
 #define _FOSC                   32000000UL
 #define _FCYCLES                (_FOSC/4)

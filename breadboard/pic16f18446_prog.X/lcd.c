@@ -18,15 +18,15 @@
       DEFINITIONS
  ****************************************************************************/
 
-#define LCD_RS     LATCbits.LATC2         // LCD CONTROL BIT. Control/data mode
-#define LCD_E      LATBbits.LATB4         // LCD CONTROL BIT. Enable
-#define LCD_D4     LATBbits.LATB5         // LCD DATA BIT
-#define LCD_D5     LATBbits.LATB6         // LCD DATA BIT
-#define LCD_D6     LATCbits.LATC7         // LCD DATA BIT
-#define LCD_D7     LATBbits.LATB7         // LCD DATA BIT
+#define LCD_RS     LATBbits.LATB4         // LCD CONTROL BIT. Control/data mode
+#define LCD_E      LATCbits.LATC2         // LCD CONTROL BIT. Enable
+#define LCD_D4     LATCbits.LATC1         // LCD DATA BIT
+#define LCD_D5     LATCbits.LATC0         // LCD DATA BIT
+#define LCD_D6     LATAbits.LATA1         // LCD DATA BIT
+#define LCD_D7     LATAbits.LATA0         // LCD DATA BIT
 
-#define LCD_TRIS_OUT()   TRISC &= ~((1<<7)+(1<<2)); TRISB &= ~((1<<7)+(1<<6)+(1<<5)+(1<<4))
-#define LCD_TRIS_IN()    TRISC |= ((1<<7)+(1<<2)); TRISB |= ((1<<7)+(1<<6)+(1<<5)+(1<<4))
+#define LCD_TRIS_OUT()   TRISC &= ~((1<<0)+(1<<1)+(1<<2)); TRISB &= ~((1<<4)); TRISA &= ~((1<<0)+(1<<1))
+#define LCD_TRIS_IN()    TRISC |= ((1<<0)+(1<<1)+(1<<2)); TRISB |= ((1<<4)); TRISA |= ((1<<0)+(1<<1))
 
 
 /****************************************************************************

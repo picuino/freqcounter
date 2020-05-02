@@ -18,8 +18,8 @@
       DEFINITIONS
  ****************************************************************************/
 
-#define LCD_E      LATBbits.LATB4         // LCD CONTROL BIT. Enable
-#define LCD_RS     LATCbits.LATC2         // LCD CONTROL BIT. Control/data mode
+#define LCD_RS     LATBbits.LATB4         // LCD CONTROL BIT. Control/data mode
+#define LCD_E      LATCbits.LATC2         // LCD CONTROL BIT. Enable
 #define LCD_D4     LATCbits.LATC1         // LCD DATA BIT
 #define LCD_D5     LATCbits.LATC0         // LCD DATA BIT
 #define LCD_D6     LATAbits.LATA1         // LCD DATA BIT

@@ -86,11 +86,11 @@ F 3 "" H 5000 2350 50  0001 C CNN
 	1    5000 2350
 	1    0    0    -1  
 $EndComp
-Text GLabel 6450 2200 0    40   Input ~ 0
+Text GLabel 6500 2200 0    40   Input ~ 0
 MCLR
-Text GLabel 6450 2300 0    40   Input ~ 0
+Text GLabel 6500 2300 0    40   Input ~ 0
 VDD
-Text GLabel 6450 2400 0    40   Input ~ 0
+Text GLabel 6500 2400 0    40   Input ~ 0
 GND
 Text GLabel 3600 2800 0    40   Input ~ 0
 INPUT_A
@@ -110,23 +110,23 @@ $EndComp
 $Comp
 L Device:R R2
 U 1 1 5E8D7C95
-P 5750 2800
-F 0 "R2" V 5700 2950 50  0000 L CNN
-F 1 "180" V 5745 2725 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 2800 50  0001 C CNN
-F 3 "~" H 5750 2800 50  0001 C CNN
-	1    5750 2800
+P 5750 3200
+F 0 "R2" V 5700 3350 50  0000 L CNN
+F 1 "180" V 5745 3125 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 3200 50  0001 C CNN
+F 3 "~" H 5750 3200 50  0001 C CNN
+	1    5750 3200
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R3
 U 1 1 5E8DA958
-P 5750 2900
-F 0 "R3" V 5700 3050 50  0000 L CNN
-F 1 "180" V 5745 2825 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 2900 50  0001 C CNN
-F 3 "~" H 5750 2900 50  0001 C CNN
-	1    5750 2900
+P 5750 3300
+F 0 "R3" V 5700 3450 50  0000 L CNN
+F 1 "180" V 5745 3225 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 3300 50  0001 C CNN
+F 3 "~" H 5750 3300 50  0001 C CNN
+	1    5750 3300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -138,29 +138,29 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Female J2
 U 1 1 5EA1E8B8
-P 6650 2900
-F 0 "J2" H 6678 2875 50  0000 L CNN
-F 1 "USB-Serial" H 6678 2782 50  0000 L CNN
-F 2 "" H 6650 2900 50  0001 C CNN
-F 3 "~" H 6650 2900 50  0001 C CNN
-	1    6650 2900
+P 6700 3300
+F 0 "J2" H 6728 3275 50  0000 L CNN
+F 1 "USB-Serial" H 6728 3182 50  0000 L CNN
+F 2 "" H 6700 3300 50  0001 C CNN
+F 3 "~" H 6700 3300 50  0001 C CNN
+	1    6700 3300
 	1    0    0    -1  
 $EndComp
 Text GLabel 5600 2400 2    40   Input ~ 0
 GND
-Text GLabel 6450 3100 0    40   Input ~ 0
+Text GLabel 6500 3500 0    40   Input ~ 0
 GND
-Text GLabel 6450 3000 0    40   Input ~ 0
+Text GLabel 6500 3400 0    40   Input ~ 0
 VDD
 $Comp
 L Connector:Conn_01x05_Female J1
 U 1 1 5EA272A8
-P 6650 2400
-F 0 "J1" H 6678 2425 50  0000 L CNN
-F 1 "ICSP PICKIT" H 6678 2332 50  0000 L CNN
-F 2 "" H 6650 2400 50  0001 C CNN
-F 3 "~" H 6650 2400 50  0001 C CNN
-	1    6650 2400
+P 6700 2400
+F 0 "J1" H 6728 2425 50  0000 L CNN
+F 1 "ICSP PICKIT" H 6728 2332 50  0000 L CNN
+F 2 "" H 6700 2400 50  0001 C CNN
+F 3 "~" H 6700 2400 50  0001 C CNN
+	1    6700 2400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -193,24 +193,24 @@ Wire Wire Line
 Wire Wire Line
 	4500 2900 3600 2900
 Wire Wire Line
-	5500 2800 5600 2800
+	5500 3200 5600 3200
 Wire Wire Line
-	5500 2900 5600 2900
-Text GLabel 6100 2800 2    40   Input ~ 0
+	5500 3300 5600 3300
+Text GLabel 6100 3200 2    40   Input ~ 0
 TX
 Wire Wire Line
-	6100 2800 5900 2800
-Text GLabel 6100 2900 2    40   Input ~ 0
+	6100 3200 5900 3200
+Text GLabel 6100 3300 2    40   Input ~ 0
 RX
 Wire Wire Line
-	6100 2900 5900 2900
-Text GLabel 6450 2800 0    40   Input ~ 0
+	6100 3300 5900 3300
+Text GLabel 6500 3200 0    40   Input ~ 0
 TX
-Text GLabel 6450 2900 0    40   Input ~ 0
+Text GLabel 6500 3300 0    40   Input ~ 0
 RX
-Text GLabel 6450 2500 0    40   Input ~ 0
+Text GLabel 6500 2500 0    40   Input ~ 0
 ICSPDAT
-Text GLabel 6450 2600 0    40   Input ~ 0
+Text GLabel 6500 2600 0    40   Input ~ 0
 ICSPCLK
 Text GLabel 5500 2500 2    40   Input ~ 0
 ICSPDAT
@@ -227,9 +227,9 @@ F 3 "" H 4200 4650 50  0001 C CNN
 	1    4200 4650
 	1    0    0    -1  
 $EndComp
-Text GLabel 5500 3000 2    40   Input ~ 0
-LCD_RS
 Text GLabel 5500 3100 2    40   Input ~ 0
+LCD_RS
+Text GLabel 5500 3000 2    40   Input ~ 0
 LCD_E
 Text GLabel 4700 4400 1    40   Input ~ 0
 LCD_E
@@ -259,13 +259,13 @@ Connection ~ 5000 4100
 Text GLabel 4100 4100 0    40   Input ~ 0
 GND
 Connection ~ 4600 4100
-Text GLabel 5500 3200 2    40   Input ~ 0
+Text GLabel 5500 2900 2    40   Input ~ 0
 LCD_D4
-Text GLabel 5500 3300 2    40   Input ~ 0
+Text GLabel 5500 2800 2    40   Input ~ 0
 LCD_D5
-Text GLabel 4500 3300 0    40   Input ~ 0
+Text GLabel 5600 3800 2    40   Input ~ 0
 LCD_D7
-Text GLabel 4500 3200 0    40   Input ~ 0
+Text GLabel 5600 3900 2    40   Input ~ 0
 LCD_D6
 Text GLabel 5200 4400 1    40   Input ~ 0
 LCD_D4
@@ -321,4 +321,16 @@ Wire Wire Line
 Wire Wire Line
 	5100 3900 5100 4100
 Connection ~ 5100 4100
+Text GLabel 5500 3800 0    40   Input ~ 0
+ICSPDAT
+Text GLabel 5500 3900 0    40   Input ~ 0
+ICSPCLK
+Wire Wire Line
+	5500 3800 5600 3800
+Wire Wire Line
+	5600 3900 5500 3900
+NoConn ~ 4500 3300
+NoConn ~ 4500 3200
+NoConn ~ 5700 4400
+NoConn ~ 5600 4400
 $EndSCHEMATC
