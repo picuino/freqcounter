@@ -426,14 +426,14 @@ Text GLabel 7200 3100 2    40   Input ~ 0
 P0
 Text GLabel 7200 3000 2    40   Input ~ 0
 P1
-Text GLabel 9100 5200 2    40   Input ~ 0
-P3
-Text GLabel 9100 5300 2    40   Input ~ 0
-P2
+Text GLabel 9700 5000 0    40   Input ~ 0
+D7
+Text GLabel 9700 5100 0    40   Input ~ 0
+D6
 Text GLabel 9100 5500 2    40   Input ~ 0
-P0
+RS
 Text GLabel 9100 5400 2    40   Input ~ 0
-P1
+E
 Text GLabel 9100 5600 2    40   Input ~ 0
 GND
 Text GLabel 9100 4900 2    40   Input ~ 0
@@ -478,15 +478,15 @@ L Connector:Conn_01x08_Male J15
 U 1 1 5EA7A830
 P 8800 5200
 F 0 "J15" H 8900 5750 50  0000 C CNN
-F 1 "PARALEL" H 8900 5650 50  0000 C CNN
+F 1 "LCD" H 8900 5650 50  0000 C CNN
 F 2 "Footprints:Connector_1x08" H 8800 5200 50  0001 C CNN
 F 3 "~" H 8800 5200 50  0001 C CNN
 	1    8800 5200
 	1    0    0    -1  
 $EndComp
-Text GLabel 9100 5000 2    40   Input ~ 0
+Text GLabel 9900 5000 2    40   Input ~ 0
 ICSPDAT
-Text GLabel 9100 5100 2    40   Input ~ 0
+Text GLabel 9900 5100 2    40   Input ~ 0
 ICSPCLK
 Wire Wire Line
 	9100 5400 9000 5400
@@ -754,4 +754,16 @@ Wire Wire Line
 Wire Wire Line
 	8200 4000 8100 4000
 Connection ~ 8100 4000
+Text GLabel 9100 5200 2    40   Input ~ 0
+D5
+Text GLabel 9100 5300 2    40   Input ~ 0
+D4
+Text GLabel 9100 5000 2    40   Input ~ 0
+D7
+Text GLabel 9100 5100 2    40   Input ~ 0
+D6
+Wire Wire Line
+	9700 5100 9900 5100
+Wire Wire Line
+	9700 5000 9900 5000
 $EndSCHEMATC
