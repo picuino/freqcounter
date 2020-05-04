@@ -419,13 +419,13 @@ SCL
 Text GLabel 8400 5000 2    40   Input ~ 0
 SDA
 Text GLabel 7200 2800 2    40   Input ~ 0
-P3
+D5
 Text GLabel 7200 2900 2    40   Input ~ 0
-P2
+D4
 Text GLabel 7200 3100 2    40   Input ~ 0
-P0
+RS
 Text GLabel 7200 3000 2    40   Input ~ 0
-P1
+E
 Text GLabel 9700 5000 0    40   Input ~ 0
 D7
 Text GLabel 9700 5100 0    40   Input ~ 0
